@@ -16,9 +16,9 @@ INSERT INTO Person (ID, GroupID, Name) VALUES
 (3, 3, 'Seko Seppo');
 
 INSERT INTO Cargo (ID, CompanyID, CarrierID, Arrived, SignerID, Signed, Signature) VALUES 
-(1, 2138491, 1, NULL , 3, 'Y', NULL),
-(2, 1512424, 1, NULL, 3, 'Y', NULL),
-(3, 1512424, 2, NULL, 3, 'Y', NULL);
+(1, 2138491, 1, NULL , 3, "2016-04-10 18:16:05", NULL),
+(2, 1512424, 1, NULL, 3, "2016-04-11 13:12:12", NULL),
+(3, 1512424, 2, NULL, 3, "2016-05-20 11:06:14", NULL);
 
 INSERT INTO SpecialCargo (ID) VALUES
 (1);
