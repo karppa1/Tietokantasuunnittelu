@@ -1,4 +1,4 @@
-INSERT INTO Group (ID) VALUES
+INSERT INTO PersonGroup (ID) VALUES
 (1),
 (2),
 (3),
@@ -6,9 +6,9 @@ INSERT INTO Group (ID) VALUES
 (5),
 (6);
 
-INSERT INTO Person (GroupID, Name) VALUES
-(3, Make Makkonen),
-(2, Nakke Nakuttaja);
+INSERT INTO Person (ID, GroupID, Name) VALUES
+(1, 3, 'Make Makkonen'),
+(2, 2, 'Nakke Nakuttaja');
 
 INSERT INTO Cargo (ID, CompanyID, CarrierID, Arrived, SignerID, Signed, Signature) VALUES 
 (1, 2138491, 1423, NULL , 5315, 'Y', NULL),
