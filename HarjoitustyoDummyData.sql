@@ -20,7 +20,7 @@ INSERT INTO Cargo (ID, CompanyID, CarrierID, Arrived, SignerID, Signed, Signatur
 (2, 1512424, 1, "2016-04-10 6:30:05", 3, "2016-04-11 13:12:12", NULL),
 (3, 1512424, 2, "2016-04-10 6:55:05", 3, "2016-05-20 11:06:14", NULL);
 
-INSERT INTO SpecialCargo (ID) VALUES
+INSERT INTO SpecialCargo (CargoID) VALUES
 (1);
 
 INSERT INTO Reservation (ID, CargoID, Description) VALUES
