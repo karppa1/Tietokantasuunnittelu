@@ -28,7 +28,7 @@ ENGINE = InnoDB;
 -- Table `K2264_1`.`Person`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `K2264_1`.`Person` (
-  `ID` INT NOT NULL,
+  `ID` INT NOT NULL AUTO_INCREMENT,
   `GroupID` INT NOT NULL,
   `Name` VARCHAR(64) NULL,
   PRIMARY KEY (`ID`),
@@ -45,7 +45,7 @@ ENGINE = InnoDB;
 -- Table `K2264_1`.`Company`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `K2264_1`.`Company` (
-  `ID` INT NOT NULL,
+  `ID` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(64) NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB;
@@ -55,7 +55,7 @@ ENGINE = InnoDB;
 -- Table `K2264_1`.`Cargo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `K2264_1`.`Cargo` (
-  `ID` INT NOT NULL,
+  `ID` INT NOT NULL AUTO_INCREMENT,
   `CompanyID` INT NOT NULL,
   `CarrierID` INT NOT NULL,
   `Arrived` TIMESTAMP NULL DEFAULT NOW(),
@@ -88,7 +88,7 @@ ENGINE = InnoDB;
 -- Table `K2264_1`.`CargoItem`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `K2264_1`.`CargoItem` (
-  `ID` INT NOT NULL,
+  `ID` INT NOT NULL AUTO_INCREMENT,
   `CargoID` INT NOT NULL,
   `Type` VARCHAR(45) NULL,
   `Content` VARCHAR(64) NOT NULL,
@@ -107,7 +107,7 @@ ENGINE = InnoDB;
 -- Table `K2264_1`.`Reservation`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `K2264_1`.`Reservation` (
-  `ID` INT NOT NULL,
+  `ID` INT NOT NULL AUTO_INCREMENT,
   `CargoID` INT NOT NULL,
   `Description` VARCHAR(1024) NULL,
   PRIMARY KEY (`ID`),
@@ -128,6 +128,7 @@ CREATE TABLE IF NOT EXISTS `K2264_1`.`SpecialCargo` (
   `SignerID` INT NOT NULL,
   `Signature` BLOB NULL,
   INDEX `fk_SpecialCargo_Cargo1_idx` (`CargoID` ASC),
+  PRIMARY KEY (`CargoID`),
   CONSTRAINT `fk_SpecialCargo_Cargo1`
     FOREIGN KEY (`CargoID`)
     REFERENCES `K2264_1`.`Cargo` (`ID`)
