@@ -18,7 +18,7 @@ SELECT CAST(Arrived AS DATE) AS Date, HOUR(Arrived) As Hour, COUNT(*) AS Arrival
 FROM Cargo
 GROUP BY Date, Hour;
 
--- Asettaa pari muuttujaa
+-- Asettaa pari muuttujaa, joita käytetään alla olevissa kyselyissä
 SET @StartTime = "2016-04-10 00:00:00";
 SET @EndTime = "2016-05-11 23:59:59";
 
