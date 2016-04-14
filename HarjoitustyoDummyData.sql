@@ -75,9 +75,9 @@ INSERT INTO Cargo (ID, CompanyID, CarrierID, Arrived, SignerID, Signed, Signatur
 (36, 1242514, 9, "2016-05-11 14:20:34", 5, "2016-05-11 14:57:12", NULL),
 (37, 1524241, 7, "2016-05-11 15:32:23", 3, "2016-05-11 16:46:14", NULL);
 
-INSERT INTO SpecialCargo (CargoID) VALUES
-(1),
-(20);
+INSERT INTO SpecialCargo (CargoID, SignerID, Signature) VALUES
+(1, 1, NULL),
+(20, 1, NULL);
 
 INSERT INTO Reservation (ID, CargoID, Description) VALUES
 (1, 3, '2 lavaa rikki'),
@@ -85,7 +85,10 @@ INSERT INTO Reservation (ID, CargoID, Description) VALUES
 (3, 9, 'Kuorma kaatunut'),
 (4, 12, 'Kuorma kaatunut'),
 (5, 17, 'Trukki epäkunnossa'),
-(6, 32, 'Trukin piikit meni seinästä läpi');
+(6, 22, 'Kuorma kaatunut'),
+(7, 27, '7 lavaa rikki'),
+(8, 32, 'Trukin piikit meni seinästä läpi'),
+(9, 37, 'Kuorma kaatunut');
 
 INSERT INTO CargoItem (ID, CargoID, Type, Content, Number) VALUES
 (1, 1, 'EURO', 'Ydinjäte', 20),
