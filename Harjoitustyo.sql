@@ -1,3 +1,7 @@
+/*
+  Huom: Tietokannassa käytetty MySQL:n AUTO_INCREMENT -ominaisuutta ja NOW() -funktiota, jotka eivät ole SQL-standardin mukaisia.
+*/
+
 -- MySQL Workbench Forward Engineering
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
